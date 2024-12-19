@@ -1,0 +1,17 @@
+{
+  "name": "create-back",
+  "version": "1.0.0",
+  "description": "Creacion de un backend",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
+  "dependencies": {
+    "node-fetch": "^3.3.2"
+  }
+}
