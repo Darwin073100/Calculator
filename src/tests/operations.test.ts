@@ -22,7 +22,15 @@ describe('Operations', () => {
         });
     });
 
-
+    describe('Suma de N numeros',()=>{ 
+        test('Debe realizar la suma de N cantidad de numeros', () => {
+            expect(operations.sumRefactor(1,2,3,4,5)).toBe(15);
+            expect(operations.sumRefactor(1,2,3,4,5,100)).toBe(115);
+            expect(operations.sumRefactor(1,2,3,4,5,85)).toBe(100);
+        })
+    })
+    
+    
     describe('Resta', ()=>{
         test('Debe restar un valor x - y, retornando un valor positivo o negativo', () => { 
             expect(operations.substract(7,7)).toBe(0);
@@ -72,4 +80,21 @@ describe('Operations', () => {
             expect(operations.division(7,0)).toBe('No se puede dividir entre 0');
         })
     });
+
+    describe('Validación de los parametros de las funciones',()=>{
+        test('Validacion de los parametros', () => {
+            expect(operations.validationParameter(1,2)).toBe(true);
+            expect(operations.validationParameter('',2)).toBe(false);
+            expect(operations.validationParameter(3,()=>{})).toBe(false);
+            expect(operations.validationParameter(NaN,()=>{})).toBe(false);
+        })
+    });
+    
+    describe('Suma de N numeros',()=>{ 
+        test('Debe realizar la suma de N cantidad de numeros', () => {
+            expect(operations.sumRefactor(1,2,3,4,5)).toBe(15);
+            expect(operations.sumRefactor(1,2,3,4,5,100)).toBe(115);
+            expect(operations.sumRefactor(1,2,3,4,5,85)).toBe(100);
+        })
+    })
 });
